@@ -1,12 +1,18 @@
+<div  *ngIf="resultados">
+  <div class="flex align-items-center justify-content-center col-12 h-5rem md:h-5rem lg:h-5rem">
+    <p class="textR text-3xl md:text-6xl lg:text-6xl">Elige el que gustes!</p>
+  </div>
 
-<div class="flex flex-wrap align-items-center justify-content-center col-12">
-  <p-fieldset class="col-12 md:col-6 lg:col-4" legend="shrtco.de">
-    <p>{{urlRequ}}</p>
-  </p-fieldset>
-  <p-fieldset class="col-12 md:col-6 lg:col-4" legend="9qr.de">
-    <p>9qr.de/twc1dT</p>
-  </p-fieldset>
-  <p-fieldset class="col-12 md:col-12 lg:col-4" legend="shiny.link">
-    <p>shiny.link/t9mVKF</p>
-  </p-fieldset>
+  <div class="flex flex-wrap align-items-center justify-content-center col-12">
+    <p-fieldset class="col-12 md:col-6 lg:col-4" legend="shrtco.de">
+      <p>{{resultados.result.short_link}}</p>
+    </p-fieldset>
+    <p-fieldset class="col-12 md:col-6 lg:col-4" legend="9qr.de">
+      <p>{{resultados.result.short_link2}}</p>
+    </p-fieldset>
+    <p-fieldset class="col-12 md:col-12 lg:col-4" legend="shiny.link">
+      <p>{{resultados.result.short_link3}}</p>
+    </p-fieldset>
+  </div>
 </div>
+

@@ -8,8 +8,7 @@ import { CutUrlService } from 'src/app/cut-url.service';
 })
 export class InputComponent implements OnInit {
 
-  borar: string = 'kk';
-
+  input: string = '';
   constructor(private urlServiceValue: CutUrlService) { }
 
   ngOnInit(): void {
@@ -18,8 +17,8 @@ export class InputComponent implements OnInit {
 
   value(url: string){
     if(url){
-      this.urlServiceValue.requestUrl(url);
-      console.log(url);
+      this.urlServiceValue.cutUrl(url);
+      this.input = '';
     }else{
       return
     }

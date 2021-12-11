@@ -1,28 +1,25 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import { BehaviorSubject, Observable } from 'rxjs';
-import { Result } from './interfaces/url.interface';
+import { URLResponse } from './interfaces/url.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CutUrlService {
 
-  private urlApi: string = 'https://api.shrtco.de/v2/shorten?url=';
+  private urlApi: string = 'https://api.shrtco.de/v2/shorten?url';
 
-  private urlReq = new BehaviorSubject<string>('');
-  public urlRequest = this.urlReq.asObservable();
+  public results!: URLResponse;
 
   constructor(private http: HttpClient) { }
 
-  searchUser (termino: string):Observable<Result>{
-    const url = `${this.urlApi}/${termino}`;
-    return this.http.get<Result>(url);
+  cutUrl (termino: string){
+    const url = `${this.urlApi}=${termino}`;
+    this.http.get<URLResponse>(url).subscribe((resp) => {
+      this.results = resp;
+      console.log(this.results);
 
-  }
-
-  public requestUrl(urlR: string): void{
-    this.urlReq.next(urlR);
+    })
   }
 
 }

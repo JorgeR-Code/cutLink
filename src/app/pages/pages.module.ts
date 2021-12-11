@@ -7,6 +7,7 @@ import { SharedModule } from '../shared/shared.module';
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -22,6 +23,8 @@ import { BrowserModule } from '@angular/platform-browser';
     PrimeNgModule,
     BrowserAnimationsModule,
     BrowserModule,
+    FormsModule
+
 
 
   ],

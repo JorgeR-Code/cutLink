@@ -12,7 +12,10 @@ export class ResultsComponent implements OnInit {
   constructor(private urlServiceRe: CutUrlService) { }
 
   ngOnInit(): void {
-    this.urlServiceRe.urlRequest.subscribe(url => this.urlRequ = url);
+  }
+
+  get resultados(){
+    return this.urlServiceRe.results;
   }
 
 }
