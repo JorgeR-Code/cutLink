@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import { URLResponse } from './interfaces/url.interface';
+import { URLResponse } from '../interfaces/url.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +17,6 @@ export class CutUrlService {
     const url = `${this.urlApi}=${termino}`;
     this.http.get<URLResponse>(url).subscribe((resp) => {
       this.results = resp;
-
     })
   }
 

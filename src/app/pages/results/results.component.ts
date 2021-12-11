@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { CutUrlService } from 'src/app/cut-url.service';
+import { CutUrlService } from 'src/app/services/cut-url.service';
 import { MessageService } from 'primeng/api';
+import { HistorialService } from 'src/app/services/historial.service';
 
 
 @Component({
@@ -14,7 +15,7 @@ export class ResultsComponent implements OnInit {
 
   urlRequ: string = '';
 
-  constructor(private urlServiceRe: CutUrlService, private messageService: MessageService) { }
+  constructor(private urlServiceRe: CutUrlService, private messageService: MessageService, private historialService: HistorialService) { }
 
   ngOnInit(): void {
   }
@@ -36,6 +37,7 @@ export class ResultsComponent implements OnInit {
     document.execCommand('copy');
     document.body.removeChild(selBox);
     this.showError();
+    this.historialService.insertarHistorial(selBox.value);
   }
   showError() {
     this.messageService.add({key: 'tc', severity:'info', summary: 'Copiado'});

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { MessageService } from 'primeng/api';
-import { CutUrlService } from 'src/app/cut-url.service';
+import { CutUrlService } from 'src/app/services/cut-url.service';
 
 @Component({
   selector: 'app-input',

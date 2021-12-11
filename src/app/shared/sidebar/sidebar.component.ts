@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HistorialService } from 'src/app/services/historial.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -9,9 +10,13 @@ export class SidebarComponent implements OnInit {
 
   visibleSidebar1: boolean = false;
 
-  constructor() { }
+  constructor(private getHistorial: HistorialService) { }
 
   ngOnInit(): void {
+  }
+
+  get historial(){
+    return this.getHistorial.historial;
   }
 
 }
