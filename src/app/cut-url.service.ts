@@ -17,7 +17,6 @@ export class CutUrlService {
     const url = `${this.urlApi}=${termino}`;
     this.http.get<URLResponse>(url).subscribe((resp) => {
       this.results = resp;
-      console.log(this.results);
 
     })
   }
