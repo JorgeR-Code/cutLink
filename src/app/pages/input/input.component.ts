@@ -12,4 +12,12 @@ export class InputComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  getValue(url: string){
+    if(url){
+      console.log(url);
+    }else{
+      return
+    }
+  }
 }
