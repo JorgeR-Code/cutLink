@@ -1,17 +1,12 @@
 <div class="grid w-full h-full">
   <app-sidebar></app-sidebar>
   <!-- logo -->
-  <div class="flex flex-column align-items-center col-12 h-12rem md:h-15rem lg:h-15rem">
-    <img  class="w-7rem md:w-10rem lg:w-10rem mt-4" src="../assets/images/logo.png">
-    <p class="logoText text-7xl">cutLink</p>
+  <div class="flex flex-column align-items-center col-12 h-5rem md:h-8rem lg:h-8rem">
+    <app-logo  class="transfo"></app-logo>
   </div>
 <!-- input -->
-  <div class="flex flex-wrap align-items-center justify-content-center col-12 h-10rem">
-      <span class="p-input-icon-left col-12 md:col-6 lg:col-6">
-        <i class="pi pi-link"></i>
-        <input type="text" pInputText placeholder="Cortar" class="col-12 md:col-12 lg:col-12"/>
-    </span>
-    <p-button label="Cortar" ></p-button>
+  <div class="flex align-items-center justify-content-center w-full col-12 md:col-12 lg:col-12 h-10rem">
+    <app-input class="w-full"></app-input>
   </div>
   <!-- Textresults -->
   <div class="flex align-items-center justify-content-center col-12 h-5rem md:h-5rem lg:h-5rem">
@@ -19,15 +14,7 @@
   </div>
 <!-- results -->
   <div class="flex flex-wrap align-items-center justify-content-center col-12">
-    <p-fieldset class="col-12 md:col-6 lg:col-4" legend="shrtco.de">
-      <p>shrtco.de/twc1dT</p>
-    </p-fieldset>
-    <p-fieldset class="col-12 md:col-6 lg:col-4" legend="9qr.de">
-      <p>9qr.de/twc1dT</p>
-    </p-fieldset>
-    <p-fieldset class="col-12 md:col-12 lg:col-4" legend="shiny.link">
-      <p>shiny.link/t9mVKF</p>
-    </p-fieldset>
+    <app-results class="w-full"></app-results>
   </div>
 
 </div>
