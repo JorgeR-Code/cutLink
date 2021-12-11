@@ -1,0 +1,26 @@
+<div class="m-3">
+  <p-sidebar [(visible)]="visibleSidebar1" [baseZIndex]="10000">
+    <div class="flex flex-column align-items-center h-screen">
+      <h3 class="text-4xl">Historial</h3>
+      <hr>
+      <div class="flex flex-column align-items-center w-full">
+        <div class="flex justify-content-center align-items-center historiale  h-2rem">
+          <a href="#" class="listado">
+            9qr.de/twc1dT
+          <!-- <a href="#" class="list-group-item list-group-item-action" *ngFor="let elemento of historial" (click) = "buscar(elemento)" #txtSidebar>
+            {{elemento | titlecase}} -->
+          </a>
+        </div>
+        <div class="flex justify-content-center align-items-center historiale  h-2rem">
+          <a href="#" class="listado">
+            9qr.de/twc1dT
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </p-sidebar>
+  <p-button type="button" class="p-mr-2" (click)="visibleSidebar1 = true" icon="pi pi-arrow-right"></p-button>
+</div>
+
+
