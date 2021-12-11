@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CutUrlService } from 'src/app/services/cut-url.service';
-import { MessageService } from 'primeng/api';
+import { Message, MessageService } from 'primeng/api';
 import { HistorialService } from 'src/app/services/historial.service';
 
 
@@ -13,7 +13,9 @@ import { HistorialService } from 'src/app/services/historial.service';
 })
 export class ResultsComponent implements OnInit {
 
-  urlRequ: string = '';
+
+
+
 
   constructor(private urlServiceRe: CutUrlService, private messageService: MessageService, private historialService: HistorialService) { }
 
@@ -22,6 +24,11 @@ export class ResultsComponent implements OnInit {
 
   get resultados(){
     return this.urlServiceRe.results;
+  }
+
+  get error(){
+
+    return this.urlServiceRe.error;
   }
 
   copy(textCopy: any){

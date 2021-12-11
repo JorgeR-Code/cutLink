@@ -1,6 +1,6 @@
 export interface URLResponse {
-  ok:     boolean;
-  result: Result;
+  ok:         boolean;
+  result:     Result;
 }
 
 export interface Result {

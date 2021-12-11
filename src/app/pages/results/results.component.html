@@ -1,3 +1,5 @@
+
+
 <div  *ngIf="resultados">
   <div class="flex align-items-center justify-content-center col-12 h-5rem md:h-5rem lg:h-5rem">
     <p class="textR text-3xl md:text-6xl lg:text-6xl">Copia con un click!</p>
@@ -18,6 +20,16 @@
       <p #short_link3>{{resultados.result.short_link3}}</p>
     </p-fieldset>
   </div>
+
 </div>
 <p-toast position="bottom-center" key="tc"></p-toast>
+<div *ngIf="error"  class="flex align-items-center justify-content-center col-12 h-5rem md:h-5rem lg:h-5rem">
+  <p-message severity="error" [text]=" 'Código: ' + error.error_code + ' ' + 'Detalles: ' + error.error"></p-message>
+</div>
+
+
+
+
+
+
 
