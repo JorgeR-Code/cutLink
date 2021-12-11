@@ -36,10 +36,10 @@ export class ResultsComponent implements OnInit {
     selBox.select();
     document.execCommand('copy');
     document.body.removeChild(selBox);
-    this.showError();
+    this.showCopy();
     this.historialService.insertarHistorial(selBox.value);
   }
-  showError() {
+  showCopy() {
     this.messageService.add({key: 'tc', severity:'info', summary: 'Copiado'});
   }
 }

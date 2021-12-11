@@ -12,7 +12,10 @@ export class HistorialService {
   }
 
   insertarHistorial(value: string){
-    this._historal.unshift(value);
-    console.log(this._historal)
+
+    if(!this._historal.includes(value)){
+      this._historal.unshift(value);
+    }
+    this._historal = this._historal.splice(0,10);
   };
 }

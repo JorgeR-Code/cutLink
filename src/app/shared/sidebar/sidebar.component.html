@@ -4,9 +4,9 @@
       <h3 class="text-4xl">Historial</h3>
       <hr>
       <div class="flex flex-column align-items-center w-full">
-        <div *ngFor="let elemento of historial"  class="flex justify-content-center align-items-center historiale  h-2rem">
+        <div (click)="copy(txtSidebar.text)" *ngFor="let elemento of historial"  class="flex justify-content-center align-items-center historiale  h-2rem">
           <a href="#" class="listado" #txtSidebar>
-            {{elemento | titlecase}}
+            {{elemento}}
           </a>
         </div>
 
@@ -15,5 +15,6 @@
   </p-sidebar>
   <p-button type="button" class="p-mr-2" (click)="visibleSidebar1 = true" icon="pi pi-arrow-right"></p-button>
 </div>
+<p-toast position="bottom-center" key="tc"></p-toast>
 
 
