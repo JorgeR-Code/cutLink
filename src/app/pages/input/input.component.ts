@@ -27,7 +27,6 @@ export class InputComponent implements OnInit {
 
     const control = new FormControl(url, Validators.pattern('https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,}'));
 
-    console.log(control.errors);
     if(url && !control.errors){
       this.urlServiceValue.cutUrl(url);
       this.input = '';
