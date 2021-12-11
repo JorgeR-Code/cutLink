@@ -4,6 +4,9 @@ import {InputTextModule} from 'primeng/inputtext';
 import {ButtonModule} from 'primeng/button';
 import {FieldsetModule} from 'primeng/fieldset';
 import {SidebarModule} from 'primeng/sidebar';
+import {MessagesModule} from 'primeng/messages';
+import {MessageModule} from 'primeng/message';
+import {ToastModule} from 'primeng/toast';
 
 @NgModule({
   declarations: [],
@@ -15,7 +18,10 @@ import {SidebarModule} from 'primeng/sidebar';
     InputTextModule,
     ButtonModule,
     FieldsetModule,
-    SidebarModule
+    SidebarModule,
+    MessagesModule,
+    MessageModule,
+    ToastModule
   ]
 })
 export class PrimeNgModule { }

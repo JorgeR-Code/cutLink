@@ -1,7 +1,13 @@
 <div class="flex flex-wrap align-items-center justify-content-center">
   <span class="p-input-icon-left col-12 md:col-6 lg:col-6">
     <i class="pi pi-link"></i>
-    <input [(ngModel)]= "input" #inputUrl type="text" pInputText placeholder="Cortar" class="col-12 md:col-12 lg:col-12" (keydown.enter)="value(inputUrl.value)"/>
+    <input [(ngModel)]= "input" #inputUrl type="text" pInputText placeholder="Cortar" class="col-12 md:col-12 lg:col-12" (keydown.enter)="value(inputUrl.value)" />
   </span>
   <p-button label="Cortar" (onClick)="value(inputUrl.value)"></p-button>
+
 </div>
+<div class="flex flex-wrap align-items-center justify-content-center">
+  <p-toast position="bottom-center" key="tc"></p-toast>
+</div>
+
+<!-- pattern="'^(https?:\\/\\/)?'+'((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+'((\\d{1,3}\\.){3}\\d{1,3}))'+'(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+'(\\?[;&a-z\\d%_.~+=-]*)?'+'(\\#[-a-z\\d_]*)?$','i'" -->
