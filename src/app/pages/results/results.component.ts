@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CutUrlService } from 'src/app/cut-url.service';
 
 @Component({
   selector: 'app-results',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultsComponent implements OnInit {
 
-  constructor() { }
+  urlRequ: string = '';
+  constructor(private urlServiceRe: CutUrlService) { }
 
   ngOnInit(): void {
+    this.urlServiceRe.urlRequest.subscribe(url => this.urlRequ = url);
   }
 
 }

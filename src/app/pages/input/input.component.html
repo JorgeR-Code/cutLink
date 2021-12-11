@@ -1,7 +1,7 @@
 <div class="flex flex-wrap align-items-center justify-content-center">
   <span class="p-input-icon-left col-12 md:col-6 lg:col-6">
     <i class="pi pi-link"></i>
-    <input #inputUrl type="text" pInputText placeholder="Cortar" class="col-12 md:col-12 lg:col-12" (keydown.enter)="getValue(inputUrl.value)"/>
+    <input #inputUrl type="text" pInputText placeholder="Cortar" class="col-12 md:col-12 lg:col-12" (keydown.enter)="value(inputUrl.value)"/>
   </span>
-  <p-button label="Cortar" (onClick)="getValue(inputUrl.value)"></p-button>
+  <p-button label="Cortar" (onClick)="value(inputUrl.value)"></p-button>
 </div>

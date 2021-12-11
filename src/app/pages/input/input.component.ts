@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CutUrlService } from 'src/app/cut-url.service';
 
 @Component({
   selector: 'app-input',
@@ -7,14 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InputComponent implements OnInit {
 
-  constructor() { }
+  borar: string = 'kk';
+
+  constructor(private urlServiceValue: CutUrlService) { }
 
   ngOnInit(): void {
   }
 
 
-  getValue(url: string){
+  value(url: string){
     if(url){
+      this.urlServiceValue.requestUrl(url);
       console.log(url);
     }else{
       return
